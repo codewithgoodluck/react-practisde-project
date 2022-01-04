@@ -1,13 +1,21 @@
 
 
+import { useState } from 'react';
 import './App.css';
-import UserForm from './component/form/UserForm';
+import Feddbackitem from './component/finderApp/Feddbackitem';
+import Header from './component/finderApp/Header';
+import FeedbackData from './component/finderApp/FeedbackData';
+import FeedbackList from './component/finderApp/FeedbackList';
 
 function App() {
+  const [feedback, setFeedback]=useState(FeedbackData)
   return (
+    <>
+    <Header text="goodluck"></Header>
     <div className="container">
-      <UserForm></UserForm>
+    <FeedbackList feedback={feedback}></FeedbackList>
     </div>
+    </>
   );
 }
 
